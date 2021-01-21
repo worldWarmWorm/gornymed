@@ -1,0 +1,47 @@
+DefaultLanguage ru
+AddDefaultCharset UTF-8
+
+php_value default_charset "utf8"
+php_value display_errors off
+php_flag short_open_tag on
+
+Options +FollowSymLinks +Includes -Indexes
+IndexIgnore */*
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule . index.php
+
+Redirect 301 /Stat/price /prajjs
+Redirect 301 /news/242 /shop
+Redirect 301 /Stat/med_v_fasovke_40_gr /med-v-fasovke-40gr
+Redirect 301 /Stat/Matochnoe_molochko2 /matochnoe-molochko-2014g
+Redirect 301 /Stat/svechi /svechi-voskovye-50rubsht
+Redirect 301 /Stat/Lipovyi_med /med-lipovyjj-2015-opt
+Redirect 301 /Stat/http__gornyimedru_Stat_grechihnuy_med100rub /med-altajjskijj-grechishnyjj-2015-opt
+Redirect 301 /Stat/http__gornyimedru_Stat_Lugovoy_myd_100rub /med-altajjskijj-lugovojj-2015opt
+Redirect 301 /Stat/bochata_pustye /bochata-pustye-dlja-mjoda-v-ass
+Redirect 301 /Stat/kuboteinery_v_barnrule2 /kubotejjnery-po-250-rubsht
+Redirect 301 /Stat/pollen_bee_2013 /pylca-obnozhka-svezhaja-2014
+Redirect 301 /Stat/vasilkovyi_med /vasilkovyjj-med-gornyjj-altajj-2014
+Redirect 301 /Stat/pologok /polozhok-propolisnyjj-lechebnyjj
+Redirect 301 /Stat/Fasovannuy_med /altajjskijj-med-fasovannyjj-v-peht-taru
+Redirect 301 /Stat/med_v_bochatah /med-v-bochatakh-bochonkakh
+Redirect 301 /Stat/Konteyneru /poluramki-kontejjnery-dlja-sotovogo-meda
+Redirect 301 /news/252/ /podmor-pchelinyjj
+Redirect 301 /Stat/novaya_upakovka /ulejj-s-mjodom
+Redirect 301 /Stat/perga /mjod-s-pergojj-100gr
+Redirect 301 /news/232/ /djagilnyjj-mjod
+Redirect 301 /Stat/Grechihnui_med /med-altajjskijj-grechishnyjj-2015-opt
+Redirect 301 /news/263/ /shop
+Redirect 301 /Stat/dyagel /djagilnyjj-mjod
+Redirect 301 /Stat/krem_med22 /krem-med-altajjskijj-krajj
+Redirect 301 /news/236/ /krem-med-altajjskijj-krajj

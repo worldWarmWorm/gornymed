@@ -1,0 +1,23 @@
+User-agent: Yandex
+Disallow: /cp
+Disallow: /assets
+Disallow: /css
+Disallow: /js
+Disallow: /protected
+Disallow: /themes
+Disallow: /shop
+Disallow: /*?p
+Disallow: /*?s
+
+
+
+User-agent: *
+Disallow: /cp
+Disallow: /assets
+Disallow: /css
+Disallow: /js
+Disallow: /protected
+Disallow: /themes
+Disallow: /shop
+Disallow: /*?p
+Disallow: /*?s
